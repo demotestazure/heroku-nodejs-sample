@@ -8,12 +8,13 @@
 	
 	<!-- Define the SonarQube global properties (the most usual way is to pass these properties via the command line) -->
 	<property name="sonar.host.url" value="https://sonarcloud.io" />
-
+ 
 	<!-- Define the Sonar properties -->
-	<property name="sonar.projectKey" value="demo:demotestazure_heroku-nodejs-sample" />
+	<property name="sonar.projectKey" value="demotestazure_heroku-nodejs-sample" />
 	<property name="sonar.projectName" value="heroku-nodejs-sample" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.organization" value="demotest123" />
+	<property name="sonar.login" value="afa3f9f9107f43cdbd36ad6a656d47f49089bb85" />
 	<property name="sonar.sources" value="src" />
 	<property name="sonar.binaries" value="target" />
 	<property name="sonar.sourceEncoding" value="UTF-8" />
