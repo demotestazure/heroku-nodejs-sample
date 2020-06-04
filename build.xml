@@ -10,7 +10,7 @@
 	<property name="sonar.host.url" value="https://sonarcloud.io" />
 
 	<!-- Define the Sonar properties -->
-	<property name="sonar.projectKey" value="demo:demotestazure_heroku-nodejs-sample" />
+	<property name="sonar.projectKey" value="demotestazure_heroku-nodejs-sample" />
 	<property name="sonar.projectName" value="heroku-nodejs-sample" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.organization" value="demotest123" />
