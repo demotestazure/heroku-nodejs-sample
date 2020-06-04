@@ -1,0 +1,29 @@
+name: Deploy Container to Heroku
+
+on: 
+  pull_request:
+    types: [closed]
+    branches: 
+      - uat
+    paths:
+      - 'src/**'
+
+jobs:
+  Heroku_Deploy:     
+     runs-on: ubuntu-latest    
+     steps:
+      - uses: actions/checkout@master
+        if: github.event.pull_request.merged == true
+      - uses: actions/checkout@v2      
+      - name: Login to Heroku Container registry
+        env: 
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:login 
+      - name: Build and push
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:push -a heroku-deployment-sfdc web 
+      - name: Release
+        env:
+         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:release -a heroku-deployment-sfdc web 
